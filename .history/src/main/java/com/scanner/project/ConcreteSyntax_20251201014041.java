@@ -246,9 +246,7 @@ public class ConcreteSyntax {
 			b = new Binary();
 			// TODO TO BE COMPLETED
 			b.term1 = e;
-			b.op = new Operator(token.getValue());
-			token = input.nextToken();
-			b.term2 = negation();
+			b.op = new O
 			e = b;
 		}
 		return e;
@@ -301,15 +299,6 @@ public class ConcreteSyntax {
 		// IfStatement --> if ( Expression ) Statement { else Statement }opt
 		Conditional c = new Conditional();
 		// TODO TO BE COMPLETED
-		match("if");
-		match("(");
-		c.test = expression();
-		match(")");
-		c.thenbranch = statement();
-		if (token.getValue().equals("else")){
-			match("else");
-			c.elsebranch = statement();
-		}
 		return c;
 	}
 
@@ -317,11 +306,6 @@ public class ConcreteSyntax {
 		// WhileStatement --> while ( Expression ) Statement
 		Loop l = new Loop();
 		// TODO TO BE COMPLETED
-		match("while");
-		match("(");
-		l.test = expression();
-		match(")");
-		l.body = statement();
 		return l;
 	}
 

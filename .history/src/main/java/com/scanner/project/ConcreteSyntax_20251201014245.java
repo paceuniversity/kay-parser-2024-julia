@@ -303,13 +303,7 @@ public class ConcreteSyntax {
 		// TODO TO BE COMPLETED
 		match("if");
 		match("(");
-		c.test = expression();
-		match(")");
-		c.thenbranch = statement();
-		if (token.getValue().equals("else")){
-			match("else");
-			c.elsebranch = statement();
-		}
+		c.test
 		return c;
 	}
 
@@ -317,11 +311,6 @@ public class ConcreteSyntax {
 		// WhileStatement --> while ( Expression ) Statement
 		Loop l = new Loop();
 		// TODO TO BE COMPLETED
-		match("while");
-		match("(");
-		l.test = expression();
-		match(")");
-		l.body = statement();
 		return l;
 	}
 

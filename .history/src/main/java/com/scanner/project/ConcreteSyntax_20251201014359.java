@@ -317,11 +317,7 @@ public class ConcreteSyntax {
 		// WhileStatement --> while ( Expression ) Statement
 		Loop l = new Loop();
 		// TODO TO BE COMPLETED
-		match("while");
-		match("(");
-		l.test = expression();
-		match(")");
-		l.body = statement();
+		match("while")
 		return l;
 	}
 

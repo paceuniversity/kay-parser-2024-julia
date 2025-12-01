@@ -319,9 +319,7 @@ public class ConcreteSyntax {
 		// TODO TO BE COMPLETED
 		match("while");
 		match("(");
-		l.test = expression();
-		match(")");
-		l.body = statement();
+		
 		return l;
 	}
 

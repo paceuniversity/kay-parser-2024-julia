@@ -321,7 +321,7 @@ public class ConcreteSyntax {
 		match("(");
 		l.test = expression();
 		match(")");
-		l.body = statement();
+		l.body 
 		return l;
 	}
 

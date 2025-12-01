@@ -320,8 +320,7 @@ public class ConcreteSyntax {
 		match("while");
 		match("(");
 		l.test = expression();
-		match(")");
-		l.body = statement();
+		match(")")
 		return l;
 	}
 
