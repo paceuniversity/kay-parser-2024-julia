@@ -265,7 +265,7 @@ public class TokenStream {
 
 	private boolean isDigit(char c) {
 		// TODO TO BE COMPLETED
-		return (c >= '0' && c <= '9');
+		return false;
 	}
 	
 	private boolean isWhiteSpace(char c) {
